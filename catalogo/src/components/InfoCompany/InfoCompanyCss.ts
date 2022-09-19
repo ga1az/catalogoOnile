@@ -13,5 +13,11 @@ export const styles = {
     backgroundColor: "white",
     borderRadius: "25%",
     padding: "0.1rem",
+    color: "black",
+  },
+
+  button: {
+    padding: "0",
+    marginLeft: "0",
   },
 };

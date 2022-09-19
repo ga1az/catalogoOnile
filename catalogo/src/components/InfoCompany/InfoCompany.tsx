@@ -1,13 +1,5 @@
-import { Image, Instagram, WhatsApp, Map } from "@mui/icons-material";
-import {
-  Box,
-  Card,
-  Container,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-  Stack,
-} from "@mui/material";
+import { Instagram, WhatsApp, Map } from "@mui/icons-material";
+import { Button, Card, ImageListItem, Stack } from "@mui/material";
 import React from "react";
 import { styles } from "./InfoCompanyCss";
 
@@ -27,9 +19,15 @@ const InfoCompany: React.FC<InfoCompanyInterface> = () => {
           right={10}
           marginTop={1}
         >
-          <WhatsApp sx={styles.icons} />
-          <Instagram sx={styles.icons} />
-          <Map sx={styles.icons} />
+          <Button sx={styles.button}>
+            <WhatsApp sx={styles.icons} />
+          </Button>
+          <Button sx={styles.button}>
+            <Instagram sx={styles.icons} />
+          </Button>
+          <Button sx={styles.button}>
+            <Map sx={styles.icons} />
+          </Button>
         </Stack>
       </ImageListItem>
     </Card>

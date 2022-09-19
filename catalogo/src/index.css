@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family:Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -14,8 +14,9 @@
 }
 
 body{
-  margin: 0;
-
+  margin: 0 auto;
+  max-width: 900px;
+  font-family: 'Courier New', Courier, monospace
 }
 
 a {

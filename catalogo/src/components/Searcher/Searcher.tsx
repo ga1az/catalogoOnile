@@ -1,13 +1,12 @@
 import { Box, Tab, Tabs } from "@mui/material";
 import React from "react";
 import { dataProducts } from "../../data/products";
+import { uniqueCategories } from "../Items/ItemsCategory";
 import { styles } from "./SearcherCss";
 
 export interface SearcherInterface {}
 
 const Searcher: React.FC<SearcherInterface> = () => {
-  const products = dataProducts;
-
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -22,8 +21,8 @@ const Searcher: React.FC<SearcherInterface> = () => {
         scrollButtons="auto"
         aria-label="scrollable auto tabs example"
       >
-        {products.map((product, index) => (
-          <Tab label={product.category} key={index} />
+        {uniqueCategories.map((product, index) => (
+          <Tab label={product} key={index} href={"#" + product} />
         ))}
       </Tabs>
     </Box>

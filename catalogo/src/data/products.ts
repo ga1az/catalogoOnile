@@ -3,7 +3,8 @@ export const dataProducts = [
     id: "1",
     name: "Product 1",
     price: 100,
-    description: "Product 1 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl augue, pharetra fermentum magna vel, ultrices euismod lacus. Pellentesque in sem in lectus ornare pellentesque. ",
     category: "Latte",
     image: "https://picsum.photos/200/300",
   },
@@ -12,7 +13,8 @@ export const dataProducts = [
     name: "Product 2",
     category: "Expresso",
     price: 200,
-    description: "Product 2 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl augue, pharetra fermentum magna vel, ultrices euismod lacus. Pellentesque in sem in lectus ornare pellentesque. ",
     image: "https://picsum.photos/200/300",
   },
   {
@@ -20,7 +22,8 @@ export const dataProducts = [
     name: "Product 3",
     category: "Capuccino",
     price: 300,
-    description: "Product 3 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl augue, pharetra fermentum magna vel, ultrices euismod lacus. Pellentesque in sem in lectus ornare pellentesque. ",
     image: "https://picsum.photos/200/300",
   },
   {
@@ -28,7 +31,8 @@ export const dataProducts = [
     name: "Product 4",
     category: "Chocolate",
     price: 400,
-    description: "Product 4 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl augue, pharetra fermentum magna vel, ultrices euismod lacus. Pellentesque in sem in lectus ornare pellentesque. ",
     image: "https://picsum.photos/200/300",
   },
   {
@@ -36,7 +40,8 @@ export const dataProducts = [
     name: "Product 5",
     category: "Americano",
     price: 500,
-    description: "Product 5 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl augue, pharetra fermentum magna vel, ultrices euismod lacus. Pellentesque in sem in lectus ornare pellentesque. ",
     image: "https://picsum.photos/200/300",
   },
   {
@@ -44,7 +49,8 @@ export const dataProducts = [
     name: "Product 6",
     category: "Americano",
     price: 500,
-    description: "Product 6 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl augue, pharetra fermentum magna vel, ultrices euismod lacus. Pellentesque in sem in lectus ornare pellentesque. ",
     image: "https://picsum.photos/200/300",
   },
   {
@@ -52,7 +58,8 @@ export const dataProducts = [
     name: "Product 7",
     category: "Americano",
     price: 500,
-    description: "Product 7 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl augue, pharetra fermentum magna vel, ultrices euismod lacus. Pellentesque in sem in lectus ornare pellentesque. ",
     image: "https://picsum.photos/200/300",
   },
 ];
