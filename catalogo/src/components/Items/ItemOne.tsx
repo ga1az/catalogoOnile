@@ -1,4 +1,7 @@
-import { Stack, Typography, Divider } from "@mui/material";
+import { Stack, Typography, Divider, Button } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { removeFromCart } from "../../features/cart/cartSlice";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 interface Dialog {
   Product: any;
@@ -6,13 +9,20 @@ interface Dialog {
 }
 
 function ItemOne(props: Dialog) {
+  const dispatch = useDispatch();
+  const handleDelete = (id: String) => {
+    dispatch(removeFromCart(id));
+  };
   const isDialogCart = () => {
     return (
-      <Stack display="flex" flexDirection="row">
+      <Stack display="flex" flexDirection="row" alignItems="center">
         <Typography variant="subtitle1">Cant: {props.Product.count}</Typography>
         <Typography variant="subtitle1" marginLeft={2}>
           SubTotal: {props.Product.count * props.Product.price}
         </Typography>
+        <Button onClick={() => handleDelete(props.Product.id)}>
+          <DeleteForeverIcon />
+        </Button>
       </Stack>
     );
   };

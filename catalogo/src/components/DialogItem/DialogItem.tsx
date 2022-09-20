@@ -86,11 +86,16 @@ const DialogItem = (props: Dialog) => {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Stack display="flex" padding={2}>
+        <Stack display="flex" padding={3}>
           <Stack>
             <img
               src={props.Data.image}
-              style={{ borderRadius: "1rem", height: "12rem", width: "100%" }}
+              style={{
+                borderRadius: "1rem",
+                height: "12rem",
+                width: "100%",
+                objectFit: "contain",
+              }}
             />
           </Stack>
           <Stack marginTop={2}>

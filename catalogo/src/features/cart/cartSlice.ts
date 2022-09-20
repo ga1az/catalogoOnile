@@ -28,15 +28,15 @@ export const cartSlice = createSlice({
       );
     },
     removeFromCart: (state: any, action: any) => {
-      const index = state.findIndex(
-        (item: any) => item.id === action.payload.id
+      const itemIndex = state.cartItems.findIndex(
+        (item: any) => item.id === action.payload
       );
-      if (index !== -1) {
-        state.splice(index, 1);
+      if (itemIndex >= 0) {
+        state.cartItems[itemIndex].count -= 1;
+        if (state.cartItems[itemIndex].count <= 0) {
+          state.cartItems.splice(itemIndex, 1);
+        }
       }
-    },
-    viewCart: (state: any, action: any) => {
-      return state;
     },
   },
 });

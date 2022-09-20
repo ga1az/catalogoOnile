@@ -22,7 +22,7 @@ const Cart: React.FC<CartInterface> = () => {
       left={16}
       right={0}
       bgcolor="blue"
-      width="90%"
+      sx={{ width: { xs: "90%", md: "50%" }, left: { xs: 16, md: 320 } }}
       height="45px"
       justifyContent="center"
       borderRadius={2}
