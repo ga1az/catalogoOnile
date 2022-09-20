@@ -33,6 +33,21 @@ const Transition = React.forwardRef(function Transition(
 const DialogCart = (props: Dialog) => {
   const cartState = useSelector((state: any) => state.cart);
   const items = cartState.cartItems;
+  const message = () => {
+    const message = items.map((item: any) => {
+      return `${item.name} Precio: ${item.price} cantidad: ${
+        item.count
+      } subtotal: ${item.price * item.count}; `;
+    });
+    return message.toString();
+  };
+  const wspmessage =
+    "https://wa.me/56945525930?text=Hola,%20quiero%20comprar%20los%20siguientes%20productos:%20" +
+    message();
+  const handleSend = () => {
+    location.href = wspmessage.replaceAll(" ", "%20");
+  };
+
   return (
     <Dialog
       open={props.Open}
@@ -89,6 +104,7 @@ const DialogCart = (props: Dialog) => {
             variant="contained"
             color="success"
             startIcon={<WhatsAppIcon />}
+            onClick={handleSend}
           >
             Enviar pedido Total: ${cartState.cartTotalAmount}
           </Button>

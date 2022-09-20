@@ -19,15 +19,9 @@ const InfoCompany: React.FC<InfoCompanyInterface> = () => {
           right={10}
           marginTop={1}
         >
-          <Button sx={styles.button}>
-            <WhatsApp sx={styles.icons} />
-          </Button>
-          <Button sx={styles.button}>
-            <Instagram sx={styles.icons} />
-          </Button>
-          <Button sx={styles.button}>
-            <Map sx={styles.icons} />
-          </Button>
+          <WhatsApp sx={styles.icons} />
+          <Instagram sx={styles.icons} />
+          <Map sx={styles.icons} />
         </Stack>
       </ImageListItem>
     </Card>
