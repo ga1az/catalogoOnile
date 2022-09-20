@@ -112,7 +112,7 @@ const DialogItem = (props: Dialog) => {
             </Typography>
             <TextField
               id="outlined-multiline-static"
-              label="Comentarios"
+              label="Comentarios adicional para el envio"
               multiline
               rows={4}
               variant="filled"

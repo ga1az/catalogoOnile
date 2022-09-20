@@ -34,18 +34,19 @@ const DialogCart = (props: Dialog) => {
   const cartState = useSelector((state: any) => state.cart);
   const items = cartState.cartItems;
   const message = () => {
-    const message = items.map((item: any) => {
-      return `${item.name} Precio: ${item.price} cantidad: ${
-        item.count
-      } subtotal: ${item.price * item.count}; `;
+    const msg = items.map((item: any) => {
+      return `\n✅${item.name} Cantidad: ${item.count} Subtotal: ${
+        item.price * item.count
+      } \n Comentario adicional: ${item.message} \n`;
     });
-    return message.toString();
+    const total = `\nTotal a pagar: ${cartState.cartTotalAmount}\n Pagar a banco estado: 1234567890`;
+    return encodeURIComponent(msg.toString() + total.toString());
   };
   const wspmessage =
-    "https://wa.me/56945525930?text=Hola,%20quiero%20comprar%20los%20siguientes%20productos:%20" +
+    "https://wa.me/56945525930?text=%F0%9F%94%B8%20Hola,%20quiero%20comprar%20los%20siguientes%20productos:" +
     message();
   const handleSend = () => {
-    location.href = wspmessage.replaceAll(" ", "%20");
+    location.href = wspmessage;
   };
 
   return (
