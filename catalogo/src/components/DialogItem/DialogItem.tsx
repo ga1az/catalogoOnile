@@ -17,6 +17,8 @@ import {
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/cart/cartSlice";
 import { styles } from "./DialogItemCss";
 
 interface Dialog {
@@ -35,12 +37,15 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const DialogItem = (props: Dialog) => {
+  const dispatch = useDispatch();
   const [multiline, setMultiline] = React.useState("");
+  const [countItem, setCountItem] = React.useState(1);
   const handleSubmit = (data: any) => {
     data.message = multiline;
-    console.log(data);
+    data.count = countItem;
+    dispatch(addToCart(data));
+    props.OnClose();
   };
-  const [countItem, setCountItem] = React.useState(1);
   const handlePlusItem = () => {
     setCountItem(countItem + 1);
   };
