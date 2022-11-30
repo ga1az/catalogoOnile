@@ -5,7 +5,7 @@ Aqui puedes ver el live del proyecto: http://paginacatalogo.s3-website-us-east-1
 
 
 
-## Para la instalacion
+## Para la instalación
 ```
 npm install
 npm run dev
